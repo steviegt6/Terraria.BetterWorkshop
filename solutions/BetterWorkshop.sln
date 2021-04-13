@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Terraria", "..\src\BetterWorkshop\Terraria\Terraria.csproj", "{81CAF39B-C683-49CF-B0BC-E50CB00F502C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReLogic", "..\src\BetterWorkshop\ReLogic\ReLogic.csproj", "{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		LinuxRelease|Any CPU = LinuxRelease|Any CPU
+		LinuxServerRelease|Any CPU = LinuxServerRelease|Any CPU
+		MacRelease|Any CPU = MacRelease|Any CPU
+		MacServerRelease|Any CPU = MacServerRelease|Any CPU
+		WindowsDebug|Any CPU = WindowsDebug|Any CPU
+		WindowsRelease|Any CPU = WindowsRelease|Any CPU
+		WindowsServerDebug|Any CPU = WindowsServerDebug|Any CPU
+		WindowsServerRelease|Any CPU = WindowsServerRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.LinuxRelease|Any CPU.ActiveCfg = LinuxRelease|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.LinuxRelease|Any CPU.Build.0 = LinuxRelease|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.LinuxServerRelease|Any CPU.ActiveCfg = LinuxServerRelease|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.LinuxServerRelease|Any CPU.Build.0 = LinuxServerRelease|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.MacRelease|Any CPU.ActiveCfg = MacRelease|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.MacRelease|Any CPU.Build.0 = MacRelease|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.MacServerRelease|Any CPU.ActiveCfg = MacServerRelease|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.MacServerRelease|Any CPU.Build.0 = MacServerRelease|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.WindowsDebug|Any CPU.ActiveCfg = WindowsDebug|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.WindowsDebug|Any CPU.Build.0 = WindowsDebug|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.WindowsRelease|Any CPU.ActiveCfg = WindowsRelease|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.WindowsRelease|Any CPU.Build.0 = WindowsRelease|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.WindowsServerDebug|Any CPU.ActiveCfg = WindowsServerDebug|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.WindowsServerDebug|Any CPU.Build.0 = WindowsServerDebug|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.WindowsServerRelease|Any CPU.ActiveCfg = WindowsServerRelease|Any CPU
+		{81CAF39B-C683-49CF-B0BC-E50CB00F502C}.WindowsServerRelease|Any CPU.Build.0 = WindowsServerRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.LinuxRelease|Any CPU.ActiveCfg = LinuxRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.LinuxRelease|Any CPU.Build.0 = LinuxRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.LinuxServerRelease|Any CPU.ActiveCfg = LinuxServerRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.LinuxServerRelease|Any CPU.Build.0 = LinuxServerRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.MacRelease|Any CPU.ActiveCfg = MacRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.MacRelease|Any CPU.Build.0 = MacRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.MacServerRelease|Any CPU.ActiveCfg = MacServerRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.MacServerRelease|Any CPU.Build.0 = MacServerRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.WindowsDebug|Any CPU.ActiveCfg = WindowsDebug|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.WindowsDebug|Any CPU.Build.0 = WindowsDebug|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.WindowsRelease|Any CPU.ActiveCfg = WindowsRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.WindowsRelease|Any CPU.Build.0 = WindowsRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.WindowsServerDebug|Any CPU.ActiveCfg = WindowsServerDebug|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.WindowsServerDebug|Any CPU.Build.0 = WindowsServerDebug|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.WindowsServerRelease|Any CPU.ActiveCfg = WindowsServerRelease|Any CPU
+		{F21AA74C-D322-4EBC-AE01-C0224EFCD7F5}.WindowsServerRelease|Any CPU.Build.0 = WindowsServerRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DE165EE-78BB-462F-BF7A-69CA101A2731}
+	EndGlobalSection
+EndGlobal

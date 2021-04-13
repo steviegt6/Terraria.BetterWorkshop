@@ -1,0 +1,25 @@
+--- src/Terraria/Terraria/GameContent/UI/Elements/UIResourcePack.cs
++++ src/BetterWorkshop/Terraria/GameContent/UI/Elements/UIResourcePack.cs
+@@ -1,6 +_,8 @@
+ using Microsoft.Xna.Framework;
+ using Microsoft.Xna.Framework.Graphics;
+ using ReLogic.Content;
++using ReLogic.Graphics;
++using Terraria.ID;
+ using Terraria.IO;
+ using Terraria.Localization;
+ using Terraria.UI;
+@@ -92,6 +_,13 @@
+ 			base.DrawSelf(spriteBatch);
+ 			DrawIcon(spriteBatch);
+ 			if (ResourcePack.Branding == ResourcePack.BrandingType.SteamWorkshop) {
++				Asset<Texture2D> steamIcon = TextureAssets.Extra[ExtrasID.WorkshopIcon];
++				Vector2 drawPos = new Vector2(GetDimensions().X + GetDimensions().Width - steamIcon.Width() - 3f, GetDimensions().Y + 2f);
++				Rectangle spriteBounds = new Rectangle((int)drawPos.X, (int)drawPos.Y, steamIcon.Width(), steamIcon.Height());
++				spriteBatch.Draw(steamIcon.Value, drawPos, steamIcon.Frame(), Color.White);
++				if (spriteBounds.Contains(Main.mouseX, Main.mouseY))
++					Main.instance.MouseText(Language.GetTextValue("BetterWorkshop.OriginatesFromWS"));
++				return;
+ 				Asset<Texture2D> asset = TextureAssets.Extra[243];
+ 				spriteBatch.Draw(asset.Value, new Vector2(GetDimensions().X + GetDimensions().Width - (float)asset.Width() - 3f, GetDimensions().Y + 2f), asset.Frame(), Color.White);
+ 			}
