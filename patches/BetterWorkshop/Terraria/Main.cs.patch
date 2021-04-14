@@ -8,21 +8,45 @@
  using System;
  using System.Collections;
  using System.Collections.Concurrent;
-@@ -39039,6 +_,18 @@
+@@ -39039,6 +_,42 @@
  			}
  
  			if (!WorldGen.drunkWorldGen) {
 +				string[] drawText;
-+				if (SocialAPI.Mode == SocialMode.Steam)
++				if (SocialAPI.Mode == SocialMode.Steam) {
++					if (_profileImage == null) {
++						int image = SteamFriends.GetLargeFriendAvatar(SteamUser.GetSteamID());
++						bool foundImage = SteamUtils.GetImageSize(image, out uint imageWidth, out uint imageHeight);
++
++						if (foundImage && imageWidth > 0 && imageHeight > 0) {
++							byte[] imageData = new byte[imageWidth * imageHeight * 4];
++							_profileImage = new Texture2D(GraphicsDevice, (int)imageWidth, (int)imageHeight);
++							foundImage = SteamUtils.GetImageRGBA(image, imageData, (int)(imageWidth * imageHeight * 4));
++
++							if (foundImage) {
++								Color[] realData = new Color[imageWidth * imageHeight];
++								int regIndex = 0;
++								for (int i = 0; i < realData.Length; i++) {
++									realData[i] = new Color(imageData[regIndex++], imageData[regIndex++],
++										imageData[regIndex++], imageData[regIndex++]);
++								}
++
++								_profileImage.SetData(realData);
++							}
++						}
++					}
++					else
++						spriteBatch.Draw(_profileImage, new Vector2(10, 10), Color.White);
++
 +					drawText = new string[] { $"{Language.GetTextValue("BetterWorkshop.LoggedInDisplay", SteamFriends.GetPersonaName())}", versionNumber };
++				}
 +				else
 +					drawText = new string[] { versionNumber };
-+				drawText = drawText.Reverse().ToArray();
++				drawText = drawText.ToArray();
 +
-+				for (int i = 0; i < drawText.Length; i++) {
++				for (int i = 0; i < drawText.Length; i++)
 +					Utils.DrawBorderString(spriteBatch, drawText[i],
 +						new Vector2(10f, screenHeight - 2f - (28f * (i + 1))), Color.White);
-+				}
 +				goto SkipForLoop;
  				for (int num107 = 0; num107 < 5; num107++) {
  					Microsoft.Xna.Framework.Color color12 = Microsoft.Xna.Framework.Color.Black;
@@ -41,3 +65,12 @@
  			}
  
  			spriteBatch.End();
+@@ -39103,6 +_,8 @@
+ 			if (menuMode == num)
+ 				GamepadMainMenuHandler.LastDrew = num;
+ 		}
++
++		private static Texture2D _profileImage = null;
+ 
+ 		private static void ClearVisualPostProcessEffects() {
+ 			for (int i = 0; i < 13; i++) {
