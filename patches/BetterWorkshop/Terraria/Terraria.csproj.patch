@@ -1,5 +1,14 @@
 --- src/Terraria/Terraria/Terraria.csproj
 +++ src/BetterWorkshop/Terraria/Terraria.csproj
+@@ -18,7 +_,7 @@
+   </PropertyGroup>
+   <PropertyGroup>
+     <PdbFile>bin\$(OutputName)</PdbFile>
+-    <ApplicationIcon>Icon.ico</ApplicationIcon>
++    <ApplicationIcon>tModLoader.ico</ApplicationIcon>
+   </PropertyGroup>
+   <ItemGroup>
+     <Reference Include="CsvHelper" />
 @@ -31,11 +_,15 @@
      <Reference Include="Microsoft.Xna.Framework.Xact" Condition="$(DefineConstants.Contains('XNA'))" />
      <Reference Include="Newtonsoft.Json" />

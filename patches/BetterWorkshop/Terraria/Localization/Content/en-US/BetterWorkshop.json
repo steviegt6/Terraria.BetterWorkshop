@@ -1,6 +1,7 @@
 ﻿{
 	"BetterWorkshop": {
 		"OriginatesFromWS": "Originates from the Steam Workshop",
-		"LoggedInDisplay": "Logged in as: {0}" 
+		"LoggedInDisplay": "Logged in as: {0}",
+		"ProfileButton": "Profile" 
 	}
 }
