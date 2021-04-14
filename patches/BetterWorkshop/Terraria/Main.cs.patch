@@ -1,0 +1,43 @@
+--- src/Terraria/Terraria/Main.cs
++++ src/BetterWorkshop/Terraria/Main.cs
+@@ -13,6 +_,7 @@
+ using ReLogic.OS;
+ using ReLogic.Peripherals.RGB;
+ using ReLogic.Utilities;
++using Steamworks;
+ using System;
+ using System.Collections;
+ using System.Collections.Concurrent;
+@@ -39039,6 +_,18 @@
+ 			}
+ 
+ 			if (!WorldGen.drunkWorldGen) {
++				string[] drawText;
++				if (SocialAPI.Mode == SocialMode.Steam)
++					drawText = new string[] { $"{Language.GetTextValue("BetterWorkshop.LoggedInDisplay", SteamFriends.GetPersonaName())}", versionNumber };
++				else
++					drawText = new string[] { versionNumber };
++				drawText = drawText.Reverse().ToArray();
++
++				for (int i = 0; i < drawText.Length; i++) {
++					Utils.DrawBorderString(spriteBatch, drawText[i],
++						new Vector2(10f, screenHeight - 2f - (28f * (i + 1))), Color.White);
++				}
++				goto SkipForLoop;
+ 				for (int num107 = 0; num107 < 5; num107++) {
+ 					Microsoft.Xna.Framework.Color color12 = Microsoft.Xna.Framework.Color.Black;
+ 					if (num107 == 4) {
+@@ -39063,11 +_,13 @@
+ 					if (num107 == 3)
+ 						num109 = 2;
+ 
++
+ 					Vector2 origin2 = FontAssets.MouseText.Value.MeasureString(versionNumber);
+ 					origin2.X *= 0.5f;
+ 					origin2.Y *= 0.5f;
+ 					spriteBatch.DrawString(FontAssets.MouseText.Value, versionNumber, new Vector2(origin2.X + (float)num108 + 10f, (float)screenHeight - origin2.Y + (float)num109 - 2f), color12, 0f, origin2, 1f, SpriteEffects.None, 0f);
+ 				}
++				SkipForLoop:;
+ 			}
+ 
+ 			spriteBatch.End();

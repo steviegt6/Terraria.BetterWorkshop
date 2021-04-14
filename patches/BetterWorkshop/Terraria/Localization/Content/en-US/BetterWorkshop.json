@@ -1,5 +1,6 @@
 ﻿{
 	"BetterWorkshop": {
-		"OriginatesFromWS": "Originates from the Steam Workshop" 
+		"OriginatesFromWS": "Originates from the Steam Workshop",
+		"LoggedInDisplay": "Logged in as: {0}" 
 	}
 }
